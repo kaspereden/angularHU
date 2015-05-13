@@ -5,5 +5,7 @@ Demo project for the HU #worldofincentro
 
 ```
 $ npm install -g bower
+$ npm install
 $ bower install
+$ grunt
 ```
