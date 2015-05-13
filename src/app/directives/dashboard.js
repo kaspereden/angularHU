@@ -7,7 +7,7 @@
         return {
             scope: true,
             restrict: 'A',
-            templateUrl: 'src/app/templates/dashboard.html',
+            templateUrl: 'dist/app/templates/dashboard.html',
             replace: true,
             compile: function (templateElement, templateAttributes) {
                 function _compile($scope, element) {
