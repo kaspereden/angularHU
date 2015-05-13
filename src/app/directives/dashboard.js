@@ -8,15 +8,15 @@
             scope: true,
             restrict: 'A',
             templateUrl: 'dist/app/templates/dashboard.html',
-            replace: true,
-            compile: function (templateElement, templateAttributes) {
-                function _compile($scope, element) {
-                    console.log($scope, element);
-                    $scope.searchType = (templateAttributes.dashboard === 'search') ? 'search' : 'no-search';
-                }
-
-                return _compile;
-            }
+            replace: true//,
+            //compile: function (templateElement, templateAttributes) {
+            //    function _compile($scope, element) {
+            //        console.log($scope, element);
+            //        $scope.searchType = (templateAttributes.dashboard === 'search') ? 'search' : 'no-search';
+            //    }
+            //
+            //    return _compile;
+            //}
         };
     }]);
 }(angular));

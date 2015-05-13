@@ -4,6 +4,8 @@
  */
 var fftf = angular.module('fitForTheFuture');
 
+fftf.controller()
+angular.module('fitForTheFuture').controller()
 
 /*
     fftf.controller() === angular.module('fitForTheFuture').controller()

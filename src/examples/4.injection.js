@@ -6,7 +6,7 @@
     fftf.controller('subscribePatientController',
         ['$scope', 'patientService',
             function ($scope, patientService) {
-
+                $scope.hallo = 'Geef een jaar in:';
             }
         ]
     );

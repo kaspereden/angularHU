@@ -1,4 +1,4 @@
 <div>
-    <div search="search" ng-if="searchType === 'search'">Dit is er niet meer straks</div>
-    <div ng-if="searchType !== 'search'">er is geen zoeken</div>
+    <input type="search" ng-model="searchModel">
+    {{ searchModel }}
 </div>

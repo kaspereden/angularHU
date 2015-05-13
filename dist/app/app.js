@@ -13,8 +13,13 @@
     var fftf = angular.module('fitForTheFuture');
 
     fftf.controller('dashboardController', ['$scope', function ($scope) {
-        console.log('pancake');
+        $scope.searchModel = '-';
         $scope.welcome = 'Welcome client';
+        $scope.$watch('searchModel', function (val) {
+            // do stuff
+            $scope.searchModel = val;
+            $scope.$apply();
+        });
     }]);
 
 }(angular));
@@ -28,33 +33,15 @@
             scope: true,
             restrict: 'A',
             templateUrl: 'dist/app/templates/dashboard.html',
-            replace: true,
-            compile: function (templateElement, templateAttributes) {
-                function _compile($scope, element) {
-                    console.log($scope, element);
-                    $scope.searchType = (templateAttributes.dashboard === 'search') ? 'search' : 'no-search';
-                }
-
-                return _compile;
-            }
+            replace: true//,
+            //compile: function (templateElement, templateAttributes) {
+            //    function _compile($scope, element) {
+            //        console.log($scope, element);
+            //        $scope.searchType = (templateAttributes.dashboard === 'search') ? 'search' : 'no-search';
+            //    }
+            //
+            //    return _compile;
+            //}
         };
     }]);
 }(angular));
-(function (angular) {
-    'use strict';
-
-    var fftf = angular.module('fitForTheFuture');
-
-    fftf.directive('search', [function(){
-        return {
-             scope: true,
-             restrict: 'A',
-             template: '<p>{{ welcome }}</p>',
-             replace: true
-        };
-    }]);
-}(angular));
-<div>
-    <div search="search" ng-if="searchType === 'search'">Dit is er niet meer straks</div>
-    <div ng-if="searchType !== 'search'">er is geen zoeken</div>
-</div>
