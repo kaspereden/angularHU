@@ -1,4 +1,10 @@
 <div>
     <input type="search" ng-model="searchModel">
-    {{ searchModel }}
+    <input type="text" ng-model="filterName">
+    <pre>searchModel: {{ searchModel | json }}</pre>
+    <pre>filterName: {{ filterName | json }}</pre>
+    <pre>results: {{ results | json }}</pre>
+    <ul>
+        <li ng-repeat="result in results | filter: filterName">{{ result}}</li>
+    </ul>
 </div>
